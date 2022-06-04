@@ -14,7 +14,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
-@Entity(name = "testOrder")
+@Entity(name = "TestOrder")
 public class Order implements Serializable {
 	private static final long serialVersionUID = 1L;
 
