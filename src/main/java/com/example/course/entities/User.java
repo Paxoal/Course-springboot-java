@@ -13,7 +13,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
-@Entity(name = "teste")
+@Entity(name = "TestUser")
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
