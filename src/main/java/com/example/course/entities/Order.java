@@ -8,7 +8,6 @@ import java.util.Set;
 
 import com.example.course.entities.enums.OrderStatus;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -34,13 +33,11 @@ public class Order implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "client_id")
 	private User client;
-	
-	
+
 	@OneToMany(mappedBy = "id.order")
 	private Set<OrderItem> items = new HashSet<>();
-	
-	public Order() {
 
+	public Order() {
 	}
 
 	public Order(Long id, Instant moment, OrderStatus orderStatus, User client) {
@@ -84,8 +81,8 @@ public class Order implements Serializable {
 	public void setClient(User client) {
 		this.client = client;
 	}
-	
-	public Set<OrderItem> getItemn(){
+
+	public Set<OrderItem> getItemn() {
 		return items;
 	}
 
